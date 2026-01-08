@@ -3939,6 +3939,117 @@
         <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Script&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+	    <style>
+    /* CORRECCIÓN FINAL ITINERARIO (Ajuste Individual) */
+
+    /* Regla general para la sección */
+    .seccion-invitacion .elementor-col-16 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end; /* Alinea todo hacia abajo para efecto escalonado */
+        text-align: center;
+        position: relative;
+    }
+
+    /* Ajuste de imágenes para que no se desborden pero mantengan calidad */
+    .seccion-invitacion .elementor-col-16 .elementor-widget-image img {
+        width: auto !important;
+        max-width: 100% !important;
+        height: auto !important;
+        display: block;
+        margin: 0 auto 10px auto;
+    }
+
+    /* AJUSTE ESPECÍFICO POR ICONO (Para igualar tamaños visuales) */
+    
+    /* Iglesia */
+    .seccion-invitacion .elementor-col-16:nth-child(1) .elementor-widget-image:first-child img {
+        height: 70px !important; /* Más alto */
+    }
+
+    /* Anillos */
+    .seccion-invitacion .elementor-col-16:nth-child(2) .elementor-widget-image:first-child img {
+        height: 55px !important; 
+    }
+
+    /* Regalos */
+    .seccion-invitacion .elementor-col-16:nth-child(3) .elementor-widget-image:first-child img {
+        height: 60px !important;
+    }
+
+    /* Cena (Plato) */
+    .seccion-invitacion .elementor-col-16:nth-child(4) .elementor-widget-image:first-child img {
+        height: 55px !important;
+    }
+
+    /* Torta */
+    .seccion-invitacion .elementor-col-16:nth-child(5) .elementor-widget-image:first-child img {
+        height: 65px !important;
+    }
+
+    /* Novios / Casa */
+    .seccion-invitacion .elementor-col-16:nth-child(6) .elementor-widget-image:first-child img {
+        height: 60px !important;
+    }
+
+    /* Línea de puntos inferior (Delgada) */
+    .seccion-invitacion .elementor-col-16 .elementor-widget-image:last-child img {
+        height: auto !important;
+        max-height: 10px !important; /* Muy delgada */
+        width: 100% !important;
+        margin-top: 10px;
+    }
+
+    /* TEXTOS (Asegurar visibilidad y estilo) */
+    .seccion-invitacion .elementor-col-16 .elementor-heading-title {
+        font-family: "Marcellus", serif !important; /* Fuente elegante */
+        color: #521013 !important;
+        font-size: 13px !important;
+        line-height: 1.3em !important;
+        font-weight: 400 !important;
+    }
+
+    /* Títulos de Hora (Más grandes) */
+    .seccion-invitacion .elementor-col-16 .elementor-widget-heading:nth-child(2) .elementor-heading-title {
+        font-size: 18px !important;
+        margin-bottom: 5px !important;
+    }
+
+    /* RESPONSIVE (Móvil) */
+    @media (max-width: 767px) {
+        .seccion-invitacion .elementor-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .seccion-invitacion .elementor-col-16 {
+            width: 48% !important; /* Dos por fila */
+            margin-bottom: 30px;
+        }
+    }
+
+    /* ESCRITORIO (Alineación Horizontal Perfecta) */
+    @media (min-width: 768px) {
+        .seccion-invitacion .elementor-container {
+            display: flex;
+            flex-wrap: nowrap; /* Todo en una línea */
+            align-items: flex-end; /* Alineados al fondo para el efecto escalonado */
+        }
+        .seccion-invitacion .elementor-col-16 {
+            width: 16.66% !important;
+            padding: 0 10px;
+        }
+        
+        /* Efecto Zig-Zag (Subir pares, bajar impares) */
+        .seccion-invitacion .elementor-col-16:nth-child(odd) {
+            transform: translateY(0px); 
+        }
+        .seccion-invitacion .elementor-col-16:nth-child(even) {
+            transform: translateY(40px); /* Bajar los pares */
+        }
+    }
+</style>
 
   </head>
   <body
@@ -8820,6 +8931,7 @@
  </script>
   </body>
 </html>
+
 
 
 
